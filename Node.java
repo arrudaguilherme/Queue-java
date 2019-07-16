@@ -1,22 +1,37 @@
-package pilha;
+package queue;
 
-class Node<T>{
-    Node<T> info;
-    Node<T>next;
 
+class Node<T> {
+    private T info;
+    private Node<T>next;
+    private Node<T>prev;
+    
     Node(T info){
         this.info=info;
     }
+    
     void setInfo(T info){
         this.info=info;
-    }
-    void setNext(Node<T>next){
-        this.next=next;
-    }
+    }    
+    
     T getInfo(){
-        return this.info();
+        return this.info;
     }
-    Node<T> getNext(){
-        return this.next();
+    
+    void setNext(Node <T> n){
+        this.next=n;
+    } 
+    
+    Node<T>getNext(){
+        return this.next;
     }
+    void setPrev(Node <T> p){
+        this.prev=p;
+    }
+    
+    Node<T>getPrev(){
+        return this.prev;
+    }
+    
+        
 }
